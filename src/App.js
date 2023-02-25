@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import Addtile from './addtile';
 import './App.css';
+import Bluetile from './bluetile';
+import Footer from './lastfoot';
+import Newhead from './newhead';
+import Sidepaned from './newsidepan';
+import Ntile from './ntile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Newhead></Newhead>
+      <div className="container">
+      <div className="row" >
+      <div className=" col-sm-3 responsivee">
+      <Sidepaned/>
+      </div>
+      <div className="col-9 ps-5">
+      <Ntile/>
+      <Addtile price="RS 10,000" />
+      <Addtile price="RS 11,000" />
+      <Addtile price="RS 12,000" />
+      <Addtile price="RS 13,000" />
+      <Bluetile/>
+      <Addtile price="RS 14,000" />
+      <Addtile price="RS 15,000" />
+      <Addtile price="RS 16,000" />
+
+      </div>
+      </div>
+      </div>
+      <Footer/>
     </div>
   );
 }
